@@ -96,12 +96,18 @@ dependencies, use the ``install`` command:
 
     $ php composer.phar install
 
+Check File Permissions
+-------------------
+
+For correct file permissions settings please refer to official Symfony2 book
+http://symfony.com/doc/current/book/installation.html#book-installation-permissions
 
 Set up the Database
 -------------------
 
 The next step is to set up the database. If you want to use SQLite as your
-database backend just go ahead and run the following:
+database backend just go ahead and run the following (for other databases 
+before executing this commands read Using Other Database Backends section) :
 
 .. code-block:: bash
 
@@ -133,6 +139,7 @@ And then access the CMF via:
     If you prefer to use another database backend, for example MySQL, run the
     configurator (point your browser to ``http://localhost:8000/config.php``)
     or set your database connection parameters in ``app/config/parameters.yml``.
+    You should do this BEFORE running any ``php app/console ...`` commands.
     Make sure you leave the ``database_path`` property at ``null`` in order to
     use another driver than SQLite. Leaving the field blank in the
     web-configurator will set it to ``null``. You also need to uncomment lines
